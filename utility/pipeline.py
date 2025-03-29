@@ -16,7 +16,8 @@ def generate_model_name() -> str:
         str: model name
     """
     # Generate a random hex string as the model name
-    return hex(np.random.randint(0, 16**8))[2:]
+    #return hex(np.random.randint(0, 16**8))[2:]
+    return hex(np.random.randint(0, 2**31 - 1))[2:]
 
 def data_preprocessing() -> tuple[np.ndarray]:
     """Generate digits dataset's train and test dataset
